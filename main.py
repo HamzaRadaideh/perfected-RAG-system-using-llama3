@@ -244,60 +244,28 @@ def ollama_chat(user_input, system_message, vault_embeddings, vault_content, oll
 
 # Function to save chat history to a JSON log file
 def save_chat_to_log(message):
-    
+    log_dir = "json"  # Define log directory
+
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
+
     log_file = os.path.join(log_dir, "data.json")
-    
-    # Check if the file exists and is not empty
+
+    # Load existing log if available
     if os.path.exists(log_file) and os.path.getsize(log_file) > 0:
         with open(log_file, "r") as f:
             log_entry = json.load(f)
     else:
         log_entry = []
-    
+
     # Append new conversation entry
-    log_entry.append({"You": message, "LLaMA": message})
-    
+    log_entry.append({"You": message["You"], "LLaMA": message["LLaMA"]})
+
     # Write updated log
-    with open('data.json', "a") as log_file:
+    with open(log_file, "w") as f:
         json.dump(log_entry, f, indent=4)
-        log_file.write("\n")
-        log_dir = "json"
-        
-        
-    
-    # log_entry = {
-    #     "You": message["You"],
-    #     "LLaMA": message["LLaMA"]
-    # }
-    # with open("chat_log.json", "a") as log_file:
-    #     json.dump(log_entry, log_file)
-    #     log_file.write("\n")
-        
-    #     log_dir = "json"
-        
 
-
-
-    # if not os.path.exists(log_dir):
-    #     os.makedirs(log_dir)
-    # log_file = os.path.join(log_dir, "data.json")
-
-    # # Check if the file exists and is not empty
-    # if os.path.exists(log_file) and os.path.getsize(log_file) > 0:
-    #     with open(log_file, "r") as f:
-    #         conversation_log = json.load(f)
-    # else:
-    #     conversation_log = []
-
-    # # Append new conversation entry
-    # conversation_log.append({"You": message, "LLaMA": message})
-
-    # # Write updated log
-    # with open(log_file, "w") as f:
-    #     json.dump(conversation_log, f, indent=4)
-        
+    print("Chat history saved to data.json")
 
 # Parse command-line arguments
 print(NEON_GREEN + "Parsing command-line arguments..." + RESET_COLOR)

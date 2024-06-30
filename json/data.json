@@ -38,5 +38,17 @@
     {
         "You": "hello, whats the population of jordan in 2024 ?",
         "LLaMA": "LLaMA response based on hello, whats the population of jordan in 2024 ?"
+    },
+    {
+        "You": "hi",
+        "LLaMA": "It seems that you want to engage in a conversation, but you didn't specify a particular topic or theme. However, I noticed that you provided some context and links related to culture, art, sports, and refugees in Jordan.\n\nIf you'd like to discuss any of these topics or share your thoughts on them, I'm here to listen and respond. Alternatively, if you have a specific question or request, feel free to ask!"
+    },
+    {
+        "You": "whats the population of jordan in 2024 ?",
+        "LLaMA": "I apologize for not finding the answer directly. However, I can provide you with some information that might be helpful.\n\nAccording to the most recent estimates available online, the estimated population of Jordan as of 2021 is around 10.8 million people (source: United Nations Statistics Division). Keep in mind that this figure is subject to slight variations depending on the source and methodology used.\n\nAs for your request about the population of Jordan in 2024, I couldn't find a reliable estimate specifically for that year since it's not yet a current or official statistic. However, if the population growth rate remains consistent with previous trends, we can expect an increase in the population by around 1-2% annually.\n\nPlease let me know if you'd like me to help with anything else!"
+    },
+    {
+        "You": "according to the data i gave you which i think has 2023?  give me 2023 then",
+        "LLaMA": "According to the data you provided, which includes a reference to October 2023, I can extract the population of Jordan for that year:\n\n* According to the \"World Economic Outlook Database, October 2023 Edition\" from the International Monetary Fund (IMF), the estimated population of Jordan in 2023 is approximately 11,484,805."
     }
 ]
